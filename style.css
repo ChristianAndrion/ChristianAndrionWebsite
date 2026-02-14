@@ -8,7 +8,7 @@
 }
 
 html {
-    background-color: rgb(112, 112, 255);
+    background-color: rgb(4, 4, 75);
     color: white;
 }
 
@@ -76,7 +76,7 @@ main {
 }
 
 main section {
-    background-color: rgb(25, 25, 227);
+    background-color: rgb(58,58,250);
     border-radius: 1em;
     padding: 2em;   
 }
@@ -133,6 +133,18 @@ section.projects div.card ul li{
 
 div.project-description{
     padding: 0.75em 0.1em;
+}
+
+a.card{
+    display: block;
+    color:white;
+    background: none;
+}
+
+div.project-description a.project-title{
+    background: none;
+    color: white;
+    padding: 0;
 }
 
 @media (min-width: 700px) {

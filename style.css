@@ -8,7 +8,7 @@
 }
 
 html {
-    background-color: rgb(58, 58, 250);
+    background-color: rgb(112, 112, 255);
     color: white;
 }
 
@@ -101,13 +101,16 @@ section.projects div.card-container {
 }
 
 section.projects div.card {
-    background-color: blue;
+    outline-color: white;
+    outline-style:outset;
     
     padding: 0.8em;
     border-radius: 0.5em
 }
 
 section.projects div.card img{
+    outline-color: white;
+    outline-style:solid;
     border-radius: 0.5em;
     width: 100%;
 }

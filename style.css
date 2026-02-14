@@ -102,6 +102,7 @@ section.projects div.card-container {
 
 section.projects div.card {
     background-color: blue;
+    
     padding: 0.8em;
     border-radius: 0.5em
 }
@@ -111,14 +112,24 @@ section.projects div.card img{
     width: 100%;
 }
 
+section.projects div.card ul{
+    padding: 0.5em 0em 0em 0em;
+}
+
 section.projects div.card ul li{
-    display: inline;
+    display: inline-flex;
+    
     font-size: 0.8em;
     background-color: rgb(174, 199, 255);
     color: white;
     border-radius: 0.2em;
-    padding: 0.1em 0.5em;
+    padding: 0em 0.5em;
+    margin: 0.3em 0em 0em 0em;
     
+}
+
+div.project-description{
+    padding: 0.75em 0.1em;
 }
 
 @media (min-width: 700px) {

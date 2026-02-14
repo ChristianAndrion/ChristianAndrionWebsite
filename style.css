@@ -20,6 +20,11 @@ a {
     border-radius: 0.25em;
 }
 
+section h2 {
+    margin-bottom: 0.3em;
+    text-align: center;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -71,12 +76,17 @@ section.projects{
     gap: 1em;
 }
 
+section.projects div.center-content{
+    display: flex;
+    justify-content: center;
+}
 
 section.projects div.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1em;
+    
+    
 }
 
 section.projects div.card {
@@ -87,4 +97,48 @@ section.projects div.card {
 
 section.projects div.card img{
     border-radius: 0.5em;
+    width: 100%;
+}
+
+section.projects div.card ul li{
+    display: inline;
+    font-size: 0.8em;
+    background-color: rgb(174, 199, 255);
+    color: white;
+    border-radius: 0.2em;
+    padding: 0.1em 0.5em;
+    
+}
+
+@media (min-width: 700px) {
+    nav ul li .menu-btn {
+        display: none;
+    }
+}
+
+@media (max-width:700px){
+    nav ul li {
+        display: none;
+    }
+
+    nav ul li .menu-btn {
+        display: inline;
+    }
+
+    main {
+        max-width: 90%;
+    }
+
+    section.projects div.card-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px){
+    main {
+        width: 100%;
+    }
+    section.projects div.card-container{
+        grid-template-columns: 1fr;
+    }
 }

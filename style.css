@@ -121,8 +121,8 @@ section.projects div.card ul li{
         display: none;
     }
 
-    nav ul li .menu-btn {
-        display: inline;
+    nav{
+        padding: 2em 2em;
     }
 
     main {
@@ -135,6 +135,9 @@ section.projects div.card ul li{
 }
 
 @media (max-width: 500px){
+    nav{
+        padding: 2em 2em;
+    }
     main {
         width: 100%;
     }

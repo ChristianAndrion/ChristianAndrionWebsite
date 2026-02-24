@@ -29,8 +29,9 @@ a {
     border-radius: 0.25em;
 }
 
+
 section h2 {
-    margin-bottom: 0.3em;
+    margin-bottom: 1em;
     text-align: center;
 }
 
@@ -80,6 +81,7 @@ main section {
 }
 
 main section.about{
+    margin: 2em 1em 0em 1em;
     border-radius: 1em;
     outline-style: outset;
 }
@@ -92,13 +94,31 @@ main section.about{
     justify-content:space-evenly;
 }
 
+div.tabcontent{
+    display: none;
+}
+
+.tabcontent.show{
+    display:block;
+}
+
 .tab{
-    background-color: aliceblue;
+    color: white;
+    font-size: 1em;
+    background-color: inherit;
+    font-size: 1em;
+    list-style-type: none;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 16px 16px;
+    transition: 0.3s;
 }
 
 .selected{
     flex: 1;
-    background-color: inherit;
+    background-color: rgb(47, 45, 79);
     color:white;
     font-size: 2em;
     list-style-type: none;
@@ -106,17 +126,17 @@ main section.about{
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 5px 16px;
+    padding: 16px 16px;
     transition: 0.3s;
 }
 
-.tab button:hover{
-    background-color: rgb(23, 23, 223);
+.tab:hover{
+    background-color: rgb(11, 11, 102);
 }
 
-.tab button.active {
+/* .tab button.active {
     background-color: rgb(7, 7, 65);
-}
+} */
 
 section.projects{
     display: flex;

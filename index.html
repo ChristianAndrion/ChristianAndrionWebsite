@@ -44,21 +44,23 @@
                             tabButtons.forEach( tabButton => {
                                 tabButton.addEventListener('click', () => {
                                     tabButton.classList.add('selected')
-                                    tabButtons.forEach(sibling => {
-                                        if (sibling !== tabButton){
-                                            sibling.classList.remove('selected')
+                                    for (let i = 0; i < tabButtons.length; i++){
+                                        document.getElementById("section"+i).classList.add("show")
+                                        if (tabButtons[i] !== tabButton){
+                                            tabButtons[i].classList.remove('selected')
+                                            document.getElementById("section"+i).classList.remove("show")
                                         }
+                                    }
                                     })
                                 })
-                            })
-                        })
+                            })();
                     </script>
 
 <!-- Game Dev / Game Jam Projects -->
 
-                    <div id="Projects" class="tabcontent">
+                    <div id="section0" class="tabcontent">
                     <!-- <h2>Game Development Projects</h2> -->
-                        <div id="gamedev" data-tab-content class="card-container">
+                        <div id="container" class="card-container tabcontent">
                             
                             <div class="card">
                                 <a class="card" href="https://azublu.itch.io/cyber-samurai">
@@ -158,7 +160,7 @@
 
 <!-- School Projects -->
 
-                    <div id="school" data-tab-content class="tabcontent">
+                    <div id="section1" class="tabcontent">
                         <div class="card-container">
                             
                             <div class="card">
@@ -195,7 +197,7 @@
 
 <!-- Art Projects -->
 
-                    <div id="art" data-tab-content class="tabcontent">
+                    <div id="section2" class="tabcontent">
 
                         <div class="card-container">
                             

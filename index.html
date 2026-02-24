@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChristianAndrionPortfolio</title>
+    <!-- <script src="tabScript.js"></script> -->
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -14,8 +15,8 @@
         <div>
             <ul>
                 <li><a class="menu-btn" href="#">Menu</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Projects">Projects</a></li>
                 <li><a href="#">Contact</a></li>
                 
             </ul>
@@ -23,13 +24,41 @@
     </nav>
         <div class="center-content">
             <main>
-                <section class="about">
+                <section id="About" class="about">
                     <h2>Hi there my name is Christian Andrion</h2>
-                    <p>I am an aspiring Game Developer currently enrolled in Pennsylvania College of Technology as a B.S. Game and Simulation major.</p>
-                </section>
+                    <p>I am an aspiring Game Developer currently enrolled in Pennsylvania College of Technology as a B.S. Game and Simulation Programming major.
+                        I love everything video games and I aspire to become a professional game developer and share my ideas and games with the world.
+                    </p>
+                </section>            
+
                 <section class="projects">
-                    <h2>Projects</h2>
-                        <div class="card-container">
+                    <ul class="tabContainer">
+                        <button class="tab selected">Game Dev Projects</button>
+                        <button class="tab">School Projects</button>
+                        <button class="tab">2D/3D Art Projects</button>
+                    </ul>
+                    <script>
+                        (function(){
+                            var tabButtons = document.querySelectorAll(".tab");
+
+                            tabButtons.forEach( tabButton => {
+                                tabButton.addEventListener('click', () => {
+                                    tabButton.classList.add('selected')
+                                    tabButtons.forEach(sibling => {
+                                        if (sibling !== tabButton){
+                                            sibling.classList.remove('selected')
+                                        }
+                                    })
+                                })
+                            })
+                        })
+                    </script>
+
+<!-- Game Dev / Game Jam Projects -->
+
+                    <div id="Projects" class="tabcontent">
+                    <!-- <h2>Game Development Projects</h2> -->
+                        <div id="gamedev" data-tab-content class="card-container">
                             
                             <div class="card">
                                 <a class="card" href="https://azublu.itch.io/cyber-samurai">
@@ -125,11 +154,93 @@
                             </div>
 
                         </div>
+                    </div>
+
+<!-- School Projects -->
+
+                    <div id="school" data-tab-content class="tabcontent">
+                        <div class="card-container">
+                            
+                            <div class="card">
+                                <a class="card" href="https://azublu.itch.io/cyber-samurai">
+                                    <img src="./assets/images/CyberSamuraiCoverImage.png" alt="" >
+                                    <div class="project-description">
+                                        <h4>Tweak TV</h4>
+                                        <p>Infinite Arcade Style Game</p>
+                                        <ul>
+                                            <li>Made in Unity</li>
+                                            <li>Group Project</li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="card">
+                                <a class="card" href="https://azublu.itch.io/tharacia-queen-of-demons">
+                                    <img src="./assets/images/TharaciaQueenOfDemonsCoverImage.png" alt="" >
+                                    <div class="project-description">
+                                        <h4>Tharacia Queen Of Demons</h4>
+                                        <p>2D Sidescrolling Action Game</p>
+                                        <ul>
+                                            <li>Made in Godot</li>
+                                            <li>Playable in Browser</li>
+                                            <li>Game Jam Project</li>
+                                            <li>Personal Project</li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- Art Projects -->
+
+                    <div id="art" data-tab-content class="tabcontent">
+
+                        <div class="card-container">
+                            
+                            <div class="card">
+                                <a class="card" href="https://azublu.itch.io/cyber-samurai">
+                                    <img src="./assets/images/CyberSamuraiCoverImage.png" alt="" >
+                                    <div class="project-description">
+                                        <h4>Tweak TV</h4>
+                                        <p>Infinite Arcade Style Game</p>
+                                        <ul>
+                                            <li>Made in Unity</li>
+                                            <li>Group Project</li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>          
+                    </div>
                 </section>
+
+                <!-- <script>
+                        function openProject(evt, projectName){
+                            var i, tabcontent, tablinks;
+                            
+                            tabcontent = document.getElementsByClassName("tabcontent");
+                            for (i = 0; i < tabcontent.length; i++){
+                                tabcontent[i].style.display = "none";
+                            }
+
+                            tablinks = document.getElementsByClassName("tablinks");
+                            for (i = 0; i < tablinks.length; i++){
+                                tablinks[i].className = tablinks[i].className.replace(" active","")
+                            }
+
+                            document.getElementById(projectName).style.display = "block"
+                            evt.currentTarget.className += " active"
+                            
+                        }
+                    </script> -->
+
                 <section class="">
 
                 </section>
             </main>
         </div>
+
 </body>
 </html>

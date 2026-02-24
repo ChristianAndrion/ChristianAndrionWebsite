@@ -109,7 +109,7 @@ div.tabcontent{
     font-size: 1em;
     list-style-type: none;
 
-    border: none;
+    border:white;
     outline: none;
     cursor: pointer;
     padding: 16px 16px;
@@ -117,7 +117,7 @@ div.tabcontent{
 }
 
 .selected{
-    flex: 1;
+    /* flex: 1em; */
     background-color: rgb(47, 45, 79);
     color:white;
     font-size: 2em;

@@ -108,6 +108,7 @@ div.tabcontent{
     background-color: inherit;
     font-size: 1em;
     list-style-type: none;
+    margin: 0.1em;
 
     border:white;
     outline: none;
@@ -118,7 +119,7 @@ div.tabcontent{
 
 .selected{
     /* flex: 1em; */
-    background-color: rgb(47, 45, 79);
+    /* background-color: rgb(47, 45, 79); */
     color:white;
     font-size: 2em;
     list-style-type: none;
@@ -130,11 +131,12 @@ div.tabcontent{
     transition: 0.3s;
 }
 
-.tab:hover{
-    background-color: rgb(11, 11, 102);
+.tab:hover:not(.selected){
+    /* background-color: rgb(11, 11, 102); */
+    font-size: 1.2em;
 }
 
-/* .tab button.active {
+/* .tab.active {
     background-color: rgb(7, 7, 65);
 } */
 

@@ -242,6 +242,33 @@ div.project-description a.project-title{
         margin-top: 5em ;
         width: 100%;
     }
+    .tab
+    {
+    color: white;
+    font-size: 0.25em;
+    font-weight: bold;
+    background-color: inherit;
+    font-size: 1em;
+    list-style-type: none;
+    margin: 0.1em;
+
+    border:white;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    }  
+    .selected
+    {
+    color:white;
+    font-size: 1.5em;
+    list-style-type: none;
+    
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+
     section.projects div.card-container{
         grid-template-columns: 1fr;
     }

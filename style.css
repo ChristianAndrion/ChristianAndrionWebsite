@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
 
+::-webkit-scrollbar {
+  width: 12px; /* Width of the vertical scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: white; /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: darkblue; /* Color of the thumb */
+  border: 3px solid white;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: midnightblue; /* Color of the thumb on hover */
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -72,7 +91,7 @@ main {
     flex-direction: column;
     align-items: stretch;
     gap: 0.5em;
-    margin: 7em 0.5em 0em;
+    margin: 7em 0.5em 2em;
     max-width: 80%;
 
 }
@@ -207,8 +226,22 @@ a.card{
     background: none;
 }
 
-a.card-art{
-    display: flex;
+div.card-art{
+    outline-color: white;
+    outline-style:outset;
+    
+    padding: 0.8em;
+    border-radius: 0.5em;
+    display:flex;
+    align-items: center;
+}
+
+div.card-art img{
+    outline-color: white;
+    outline-style:solid;
+    border-radius: 0.5em;
+    width: 100%;
+    
 }
 
 .image-row{
@@ -243,9 +276,18 @@ div.project-description a.project-title{
     padding: 0;
 }
 
+#Contact{
+    border-top: solid;
+    padding: 1em;
+    background-color: midnightblue;
+    width: 100%;
+}
+
 .contact-info{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
 }
 
@@ -253,9 +295,24 @@ div.project-description a.project-title{
     font-size: large;
     color: inherit;
     background-color: inherit;
-    padding: 0.5em 1em;
+    padding: 0.25em 1em;
     margin: 1em;
 }
+
+#fullpage {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-size: 50%;
+        background-repeat: no-repeat no-repeat;
+        background-position: center center;
+        background-color: rgba(0, 0, 0, 0.7);
+        cursor: pointer;
+    }
 
 @media (min-width: 700px) {
     nav ul li .menu-btn {

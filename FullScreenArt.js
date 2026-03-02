@@ -1,5 +1,5 @@
-const tabs = document.getElementsByClassName('tab')
-const tabContents = document.getElementsByClassName('tabcontent')
+// const tabs = document.getElementsByClassName('tab')
+// const tabContents = document.getElementsByClassName('tabcontent')
 
 // function openProject(evt, projectName){
 //     var i, tabcontent, tablinks;
@@ -35,4 +35,12 @@ const tabContents = document.getElementsByClassName('tabcontent')
 //     })
 // })
 
+const imgs = document.querySelectorAll('.card-art img');
+const fullPage = document.querySelector('#fullpage');
 
+imgs.forEach(img => {
+  img.addEventListener('click', function() {
+    fullPage.style.backgroundImage = 'url(' + img.src + ')';
+    fullPage.style.display = 'block';
+  });
+});

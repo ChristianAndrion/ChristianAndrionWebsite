@@ -80,7 +80,7 @@ main {
 main section {
     background-color: rgba(8, 8, 103, 0);
     border-radius: 1em;
-    padding: 2em;   
+    padding: 1em;   
 }
 
 main section.about{
@@ -160,6 +160,11 @@ section.projects div.card-container {
     gap: 1em;
 }
 
+section.projects div.card-art-container{
+    display: grid;
+    gap: 1em;
+}
+
 section.projects div.card {
     outline-color: white;
     outline-style:outset;
@@ -202,10 +207,54 @@ a.card{
     background: none;
 }
 
+a.card-art{
+    display: flex;
+}
+
+.image-row{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 1em;
+}
+
+.width-12{
+    grid-column: span 12;
+}
+
+.width-6{
+    grid-column: span 6;
+}
+
+.width-4{
+    grid-column: span 4;
+}
+
+.width-3{
+    grid-column: span 3;
+}
+
+.width-2{
+    grid-column: span 2;
+}
+
 div.project-description a.project-title{
     background: none;
     color: white;
     padding: 0;
+}
+
+.contact-info{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.linkedIn-Button{
+    font-size: large;
+    color: inherit;
+    background-color: inherit;
+    padding: 0.5em 1em;
+    margin: 1em;
 }
 
 @media (min-width: 700px) {

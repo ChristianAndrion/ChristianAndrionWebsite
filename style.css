@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
 
+/* Scroll bar code provided by Gabriel Heisre*/
+
 ::-webkit-scrollbar {
   width: 12px; /* Width of the vertical scrollbar */
 }
@@ -17,6 +19,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: midnightblue; /* Color of the thumb on hover */
 }
+
 
 
 * {
@@ -241,7 +244,7 @@ div.card-art img{
     outline-style:solid;
     border-radius: 0.5em;
     width: 100%;
-    
+    cursor: pointer;
 }
 
 .image-row{
@@ -298,6 +301,8 @@ div.project-description a.project-title{
     padding: 0.25em 1em;
     margin: 1em;
 }
+
+/*Full page clickable art images code provided by Gabriel Heiser*/
 
 #fullpage {
         display: none;

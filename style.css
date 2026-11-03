@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
 
-/* Scroll bar code provided by Gabriel Heisre*/
+/* Scroll bar code provided by Gabriel Heiser*/
 
 ::-webkit-scrollbar {
   width: 12px; /* Width of the vertical scrollbar */
@@ -54,7 +54,7 @@ a {
 
 
 section h2 {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     text-align: center;
 }
 
@@ -281,14 +281,14 @@ div.project-description a.project-title{
 
 #Contact{
     border-top: solid;
-    padding: 1em;
+    padding: 0.5em;
     background-color: midnightblue;
     width: 100%;
 }
 
 .contact-info{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -298,8 +298,7 @@ div.project-description a.project-title{
     font-size: large;
     color: inherit;
     background-color: inherit;
-    padding: 0.25em 1em;
-    margin: 1em;
+    padding: 0.25em 0.5em;
 }
 
 /*Full page clickable art images code provided by Gabriel Heiser*/
